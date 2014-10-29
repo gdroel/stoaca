@@ -29,9 +29,16 @@
 	font-family: 'Lora'
 }
 */
-.jumbotron > p{
+.jumbotron-text{
 
-	font-family: 'Montserrat'
+	font-family: 'Montserrat';
+	font-size: 17px;
+
+}
+
+p{
+
+	font-family: 'Lora';
 }
 
 h1{
@@ -64,9 +71,22 @@ h3{
 	color: white;
 }
 
-.jumbotron .container > h1{
+.jumbotron-clubs{
 
-	margin-top: 120px;
+	color: black;
+	background-color: rgb(216,216,216) ;
+	margin-top: -200px;
+	height: 400px;
+}
+
+.movedown-h1{
+
+	margin-top: 200px;
+}
+
+.movedown-less-h1{
+
+	margin-top: 100px;
 }
 
 .home-page{

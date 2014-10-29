@@ -4,7 +4,8 @@
 <div class="bg1">
 <div class="jumbotron">
 	<div class="container">
-		<h1>Stoa California</h1>
+		<h1 class="movedown-less-h1">Stoa California</h1>
+		<p class="jumbotron-text">Welcome to the official website of Stoa CA.</p>
 	</div>
 </div></div>
 <div class="container home-page">

@@ -15,3 +15,8 @@ Route::get('/', function()
 {
 	return View::make('index');
 });
+
+Route::get('clubs', function(){
+
+	return View::make('clubs');
+});

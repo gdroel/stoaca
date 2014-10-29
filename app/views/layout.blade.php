@@ -29,16 +29,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#"><img src="../images/logo.png" class="logo"></a>
+              <a class="navbar-brand" href="{{ URL::to('/') }}"><img src="../images/logo.png" class="logo"></a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="#">Clubs</a></li>
+                <li><a href="{{ URL::to('/clubs') }}">Clubs</a></li>
                 <li><a href="#">Coach's Tips</a></li>
                 <li><a href="#">Tournaments</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Stoa USA</a></li>
+                <li><a href="#">Register</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
