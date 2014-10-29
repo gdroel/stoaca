@@ -23,6 +23,9 @@
 
 	</div>
 	<div class="col-md-3 sidebar">
+		@if(Auth::check())
+		<a class="btn btn-default sidebar-button">Add Or Edit Your Club Info</a>
+		@else
 		<h3>Login</h3>
 		{{ Form::open() }}
 		{{ Form::text('email',null,array('class'=>'form-control')) }}
@@ -30,6 +33,11 @@
 		{{ Form::password('password', array('class'=>'form-control')) }}
 		{{ Form::submit('Login', array('class'=>'btn btn-default')) }}
 		{{ Form::close() }}
+		@endif
+		<h3>All Clubs</h3>
+		@foreach($clubs as $club)
+		<li>{{ $club->name }}</li>
+		@endforeach
 	</div>
 </div>
 @stop

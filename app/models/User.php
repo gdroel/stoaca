@@ -9,6 +9,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	public function club(){
+
+		return $this->hasOne('Club');
+	}
+
 	/**
 	 * The database table used by the model.
 	 *
@@ -22,5 +27,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var array
 	 */
 	protected $hidden = array('password', 'remember_token');
+
 
 }

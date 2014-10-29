@@ -18,7 +18,8 @@ Route::get('/', function()
 
 Route::get('clubs', 'ClubsController@clubsIndex');
 Route::get('clubs/new', 'ClubsController@showClubsCreate');
-Route::post('clubs/new', 'ClubsController@doClubsCreate');
+Route::post('clubs/new', array('before'=>'new', 'uses'=>'ClubsController@doClubsCreate'));
+Route::post('clubs/edit', 'ClubsController@doClubsEdit');
 
 Route::get('register','UsersController@showRegister');
 Route::post('register','UsersController@doRegister');
