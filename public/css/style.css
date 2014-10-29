@@ -41,15 +41,29 @@ p{
 	font-family: 'Lora';
 }
 
+strong{
+
+	font-family: 'Lora'
+}
+
 h1{
 
 	font-family: 'Montserrat';
 	font-weight: 700;
 }
 
+h2{
+
+	font-family: 'Montserrat';
+}
 h3{
 
 	font-family: 'Montserrat'
+}
+
+.gray{
+
+	color: gray;
 }
 
 /** Main Body / Content **/
@@ -118,4 +132,15 @@ h3{
 	background-color: white;
 	padding: 15px;
 
+}
+
+.inline{
+
+	display: inline;
+}
+/**Movedown **/
+
+.movedown{
+
+	margin-top: 50px;
 }

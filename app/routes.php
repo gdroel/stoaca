@@ -16,7 +16,6 @@ Route::get('/', function()
 	return View::make('index');
 });
 
-Route::get('clubs', function(){
-
-	return View::make('clubs');
-});
+Route::get('clubs', 'ClubsController@clubsIndex');
+Route::get('clubs/new', 'ClubsController@showClubsCreate');
+Route::post('clubs/new', 'ClubsController@doClubsCreate');
