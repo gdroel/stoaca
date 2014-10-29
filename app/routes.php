@@ -19,3 +19,10 @@ Route::get('/', function()
 Route::get('clubs', 'ClubsController@clubsIndex');
 Route::get('clubs/new', 'ClubsController@showClubsCreate');
 Route::post('clubs/new', 'ClubsController@doClubsCreate');
+
+Route::get('register','UsersController@showRegister');
+Route::post('register','UsersController@doRegister');
+
+Route::get('login', 'UsersController@showLogin');
+Route::post('login', 'UsersController@doLogin');
+Route::get('logout', 'UsersController@doLogout');

@@ -36,10 +36,16 @@
                 <li><a href="{{ URL::to('/clubs') }}">Clubs</a></li>
                 <li><a href="#">Coach's Tips</a></li>
                 <li><a href="#">Tournaments</a></li>
+                <li><a href="#">Resources</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Stoa USA</a></li>
-                <li><a href="#">Register</a></li>
+                @if(Auth::check())
+                <li><a href="{{ URL::to('logout') }}">Logout</a></li>
+                <li><p class='navbar-text'>Hi, {{ Auth::user()->first_name }}</p></li>
+                @else
+                <li><a href="{{ URL::to('register') }}">Register</a></li>
+                <li><a href="{{ URL::to('login') }}">Login</a></li>
+                @endif
               </ul>
             </div><!--/.nav-collapse -->
           </div><!--/.container-fluid -->
