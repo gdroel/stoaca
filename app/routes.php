@@ -27,3 +27,8 @@ Route::post('register','UsersController@doRegister');
 Route::get('login', 'UsersController@showLogin');
 Route::post('login', 'UsersController@doLogin');
 Route::get('logout', 'UsersController@doLogout');
+
+Route::get('tips', 'TipsController@tipsIndex');
+Route::get('tips/new', 'TipsController@showTipsCreate');
+Route::post('tips/new', 'TipsController@doTipsCreate');
+Route::get('tips/{id}', 'TipsController@showTip');

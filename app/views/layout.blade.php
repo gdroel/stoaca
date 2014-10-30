@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ URL::asset('css/style.css') }}">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script src="//cdn.ckeditor.com/4.4.5/basic/ckeditor.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,7 +35,7 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="{{ URL::to('/clubs') }}">Clubs</a></li>
-                <li><a href="#">Coach's Tips</a></li>
+                <li><a href="{{ URL::to('/tips') }}">Coach's Tips</a></li>
                 <li><a href="#">Tournaments</a></li>
                 <li><a href="#">Resources</a></li>
               </ul>

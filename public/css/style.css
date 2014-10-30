@@ -110,6 +110,14 @@ h3{
 	
 }
 
+.tip{
+
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+	box-shadow:         1px 1px 1px 1px #ccc;
+	padding: 20px;
+	
+}
 
 .main-content{
 
