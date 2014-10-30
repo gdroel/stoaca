@@ -61,6 +61,17 @@ h3{
 	font-family: 'Montserrat'
 }
 
+.list-title{
+
+	text-align: center;
+	font-family: 'Montserrat'
+}
+
+.list-group-item{
+
+	font-family: 'Lora';
+}
+
 .gray{
 
 	color: gray;
@@ -132,6 +143,14 @@ h3{
 	background-color: white;
 	padding-left: 15px;
 	padding-right: 15px;
+}
+
+.tip{
+
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+	box-shadow:         1px 1px 1px 1px #ccc;
+	padding: 20px;
 }
 
 .sidebar{

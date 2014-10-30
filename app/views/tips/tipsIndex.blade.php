@@ -13,8 +13,10 @@
 				<h3 class="inline">{{ $tip->title }}</h3><p class="inline pull-right gray"><span class="glyphicon glyphicon-user"></span> &nbsp{{ $tip->user->first_name }} {{ $tip->user->last_name }}&nbsp
 				 <span class="glyphicon glyphicon-time"></span>&nbsp {{ $tip->updated_at->format('g:ia M j') }}</p>
 				 <hr>
-				<p>{{ $tip->description }}</p>
+				<p>{{ str_limit($tip->description, $limit = 1000, $end = '...') }}</p>
+                <p><a href="{{ action('TipsController@showTip', $tip->id) }}">Read More →</a></p>
 			</div>
+			<br>
 		@endforeach
 	</div>
 	<div class="col-md-4">

@@ -30,7 +30,7 @@ class TipsController extends BaseController{
 	public function showTip($id){
 
 		$tip = Tip::where('id',$id)->first();
-
-		return View::make('tips.tipShow',compact('tip'));
+		$tips = Tip::where('id','!=',$id)->get();
+		return View::make('tips.tipShow',compact('tip','tips'));
 	}
 }
