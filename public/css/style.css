@@ -16,7 +16,7 @@
 	border-radius: 1px; /* future proofing */
 }
 
-.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > .navbar-text {
 
 	font-family: 'Lora';
 	color: white;
@@ -25,6 +25,11 @@
 .navbar-default .navbar-brand{
 
 	font-family: 'Lora'
+}
+
+.navbar-text{
+
+	color: white;
 }
 /** Text **/
 
@@ -103,6 +108,15 @@ h3{
 	background-size: cover;
 }
 
+.small-bg{
+
+	background-color: #29506D;
+	height: 100px;
+	z-index: -1;
+	margin-top: -100px;
+	width: 100%;
+	background-size: cover;
+}
 .jumbotron{
 
 	text-align: center;
@@ -144,6 +158,25 @@ h3{
 	
 }
 
+.tips-box{
+
+	/**background-color: #74AFAD;**/
+	margin-top: 20px;
+	padding: 15px;
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+	box-shadow:         1px 1px 1px 1px #ccc;
+}
+
+.tournaments-box{
+
+	/**background-color: #277453;**/
+	-moz-box-shadow:    1px 1px 1px 1px #ccc;
+	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
+	box-shadow:         1px 1px 1px 1px #ccc;
+	margin-top: 20px;
+	padding: 15px;
+}
 .main-content{
 
 	/*-moz-box-shadow:    1px 1px 1px 1px #ccc;
@@ -187,6 +220,12 @@ h3{
 }
 
 /**Buttons**/
+
+.btn-default{
+
+	background-color:#74AFAD;
+	color: white;
+}
 
 .sidebar-button{
 

@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+<div class="small-bg"></div>
 <div class="container movedown">
 	<div class="col-md-4 col-md-offset-4">
 		<h2>Login</h2>
