@@ -7,15 +7,19 @@
 .navbar-default{
 
 	margin-top: 30px;
-	background-color: white;
+	background-color: #558188;
+	background-color: #74AFAD;
+	background-color: transparent;
 	-moz-border-radius: 1px;
 	-webkit-border-radius: 1px;
+	border: none;
 	border-radius: 1px; /* future proofing */
 }
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus {
 
-	font-family: 'Lora'
+	font-family: 'Lora';
+	color: white;
 }
 
 .navbar-default .navbar-brand{
@@ -29,6 +33,7 @@
 	font-family: 'Lora'
 }
 */
+
 .jumbotron-text{
 
 	font-family: 'Montserrat';
@@ -50,15 +55,23 @@ h1{
 
 	font-family: 'Montserrat';
 	font-weight: 700;
+	
 }
 
 h2{
 
 	font-family: 'Montserrat';
+	color: #253939;
 }
 h3{
 
-	font-family: 'Montserrat'
+	font-family: 'Montserrat';
+	color: #253939;
+}
+
+.jumbotron-h1{
+
+	color: white;
 }
 
 .list-title{
@@ -81,7 +94,8 @@ h3{
 
 .bg1{
 
-	background-image: url('../images/stoa.jpg');
+	/** background-image: url('../images/stoa.jpg'); **/
+	background-color: #29506D;
 	height: 400px;
 	z-index: -1;
 	margin-top: -100px;
@@ -98,8 +112,8 @@ h3{
 
 .jumbotron-clubs{
 
-	color: black;
-	background-color: rgb(216,216,216) ;
+	color: white;
+	background-color: #74AFAD ;
 	margin-top: -200px;
 	height: 400px;
 }

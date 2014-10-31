@@ -3,7 +3,7 @@
 @section('content')
 <div class="jumbotron jumbotron-clubs">
 	<div class="container">
-		<h1 class="jumbotron-clubs-h1 movedown-h1">Clubs</h1>
+		<h1 class="jumbotron-h1 movedown-h1">Clubs</h1>
 	</div>
 </div>
 <div class="container">
