@@ -37,7 +37,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="{{ URL::to('/clubs') }}">Clubs</a></li>
                 <li><a href="{{ URL::to('/tips') }}">Coach's Tips</a></li>
-                <li><a href="#">Tournaments</a></li>
+                <li><a href="{{ URL::to('/tournaments') }}">Tournaments</a></li>
                 <li><a href="#">Resources</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
