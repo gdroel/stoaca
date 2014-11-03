@@ -32,3 +32,7 @@ Route::get('tips', 'TipsController@tipsIndex');
 Route::get('tips/new', 'TipsController@showTipsCreate');
 Route::post('tips/new', 'TipsController@doTipsCreate');
 Route::get('tips/{id}', 'TipsController@showTip');
+
+Route::get('tournaments', 'tournamentsController@TournamentsIndex');
+Route::get('tournaments/new', 'TournamentsController@showTournamentsCreate');
+Route::post('/tournaments/new', 'TournamentsController@doTournamentsCreate');

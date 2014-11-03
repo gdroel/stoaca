@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-
+<div class="small-bg"></div>
 <div class="container movedown">
 	<div class="col-md-9">
 
