@@ -1,8 +1,10 @@
 @extends('layout')
 
 @section('content')
+<div class="jumbotron jumbotron-clubs">
 
-<div class="container movedown">
+</div>
+<div class="container moveup">
 	<div class="col-md-9 tip">
 		<h2>{{ $tip->title }}</h2>
 		<p class="gray"><span class="glyphicon glyphicon-user"></span> &nbsp{{ $tip->user->first_name }} 

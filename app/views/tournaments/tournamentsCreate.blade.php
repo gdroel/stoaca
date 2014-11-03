@@ -8,6 +8,11 @@
 <div class="container movedown">
 
 	<div class="col-md-6 col-md-offset-3">
+	@if($errors->has())
+	   @foreach ($errors->all() as $error)
+	      <div class="alert alert-danger" role="alert">{{ $error }}</div>
+	  @endforeach
+	@endif
 	{{ Form::open(array('action'=>'TournamentsController@doTournamentsCreate')) }}
 
 	{{ Form::label('name', 'Name') }}

@@ -7,7 +7,7 @@
 	</div>
 </div>
 <div class="container">
-	<div class="col-md-9">
+	<div class="col-md-8">
 		
 		@foreach($tournaments as $tournament)
 		<div class="row tournament">
@@ -42,10 +42,18 @@
 		@endforeach
 		
 	</div>
-	<div class="col-md-3">
+	<div class="col-md-4">
 		@if(Auth::check())
 			<a href="{{ URL::to('tournaments/new') }}" class="btn btn-default sidebar-button">Add A Tournament</a>
 		@endif
+		<hr>
+		<h3>Tournaments</h3>
+		<hr>
+		<ul class="list-group">
+		@foreach($tournaments as $tournament)
+			<li class="list-group-item">{{ $tournament->name }}</li>
+		@endforeach
+		</ul>
 	</div>
 </div>
 @stop

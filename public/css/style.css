@@ -155,6 +155,7 @@ h3{
 	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
 	box-shadow:         1px 1px 1px 1px #ccc;
 	padding: 20px;
+	background-color: white;
 	
 }
 
@@ -223,6 +224,11 @@ h3{
 	display: inline;
 }
 /**Movedown **/
+
+.moveup{
+
+	margin-top: -150px;
+}
 
 .movedown{
 
