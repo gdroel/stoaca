@@ -8,7 +8,11 @@
 		@if(isset($club))
 		<h2>Edit Your Club Info</h2>
 		<hr>
-
+		@if($errors->has())
+		   @foreach ($errors->all() as $error)
+		      <div class="alert alert-danger" role="alert">{{ $error }}</div>
+		  @endforeach
+		@endif
 		{{ Form::open(array('action'=>'ClubsController@doClubsEdit')) }}
 		{{ Form::label('name', 'Club Name') }}
 		{{ Form::text('name', $club->name , array('class'=>'form-control')) }}

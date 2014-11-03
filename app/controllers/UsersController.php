@@ -9,17 +9,35 @@ class UsersController extends BaseController{
 
 	public function doRegister(){
 
-		$user = new User();
+		$rules = array(
+			'first_name'=>'required|alpha|min:2|max:20',
+			'last_name'=>'required|alpha|min:2|max:20',
+			'email'=>'required|email',
+			'password'=>'required|min:6|max:20'
+			);
 
-		$user->first_name = Input::get('first_name');
-		$user->last_name = Input::get('last_name');
-		$user->email = Input::get('email');
-		$user->password = Hash::make(Input::get('password'));
-		$user->role = "coach";
+		$validator = Validator::make(Input::all(),$rules);
 
-		$user->save();
+		if($validator->passes()){
 
-		return Redirect::to('/');
+			$user = new User();
+
+			$user->first_name = Input::get('first_name');
+			$user->last_name = Input::get('last_name');
+			$user->email = Input::get('email');
+			$user->password = Hash::make(Input::get('password'));
+			$user->role = "coach";
+
+			$user->save();
+
+			return Redirect::to('/');
+
+		}
+
+		else{
+
+			return Redirect::to('register')->withInput()->withErrors($validator);
+		}
 	}
 
 	public function showLogin(){

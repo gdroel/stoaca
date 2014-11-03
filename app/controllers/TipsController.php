@@ -16,15 +16,33 @@ class TipsController extends BaseController{
 
 	public function doTipsCreate(){
 
-		$tip = new Tip();
+		$rules = array(
+			'title'=>'required|min:5|max:30',
+			'description'=>'required|min:10|max:1000',
+			);
 
-		$tip->title = Input::get('title');
-		$tip->description = Input::get('description');
-		$tip->user_id = Auth::user()->id;
+		$validator = Validator::make(Input::all(), $rules);
 
-		$tip->save();
+		if($validator->passes()){
 
-		return Redirect::to('tips');
+			$tip = new Tip();
+
+			$tip->title = Input::get('title');
+			$tip->description = Input::get('description');
+			$tip->user_id = Input::get('user_id');
+
+			$tip->save();
+
+			return Redirect::to('tips');
+		}	
+
+		else{
+
+			return Redirect::to('tips/new')->withInput()->withErrors($validator);
+		}
+		
+
+
 	}
 
 	public function showTip($id){
