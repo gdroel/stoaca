@@ -4,9 +4,11 @@ class TipsController extends BaseController{
 
 	public function tipsIndex(){
 
-		$tips = Tip::all();
+		$tips = Tip::orderBy('id','desc')->paginate(10);
 
-		return View::make('tips.tipsIndex',compact('tips'));
+		$sidebartips = Tip::all();
+
+		return View::make('tips.tipsIndex',compact('tips','sidebartips'));
 	}
 
 	public function showTipsCreate(){

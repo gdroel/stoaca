@@ -18,6 +18,9 @@
 			</div>
 			<br>
 		@endforeach
+		<ul class="pagination">
+			{{ $tips->links() }}
+		</ul>
 	</div>
 	<div class="col-md-4">
 		@if(Auth::check())
@@ -25,8 +28,8 @@
 		<hr>
 		@endif	
 		<ul class="list-group">
-			@foreach($tips as $tip)
-			<li class="list-group-item">{{ $tip->title }}</li>
+			@foreach($sidebartips as $tip)
+			<li class="list-group-item"><a href="{{ action('TipsController@showTip', $tip->id) }}">{{ $tip->title }}</a></li>
 			@endforeach
 		</ul>
 	</div>

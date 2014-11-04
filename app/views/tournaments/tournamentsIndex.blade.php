@@ -40,7 +40,9 @@
 
 			</div>
 		@endforeach
-		
+		<ul class="pagination">
+		{{ $tournaments->links() }}
+		</ul>
 	</div>
 	<div class="col-md-4">
 		@if(Auth::check())

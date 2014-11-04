@@ -54,6 +54,7 @@
         </div>
     </div>
     @yield('content')
+    <div class="col-md-12 footer"><p class="montserrat">&copy 2014 Stoa Speech & Debate | Made by Gabe Roeloffs</p></div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

@@ -15,9 +15,13 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
-		return View::make('hello');
+	public function index(){
+
+		$tournaments = Tournament::orderBy('id','desc')->take(4)->get();
+		$tip = Tip::orderBy('id', 'desc')->first();
+
+		return View::make('index',compact('tournaments','tip'));
+
 	}
 
 }

@@ -4,7 +4,7 @@ class TournamentsController extends BaseController{
 
 	public function tournamentsIndex(){
 
-		$tournaments = Tournament::all();
+		$tournaments = Tournament::orderBy('id','desc')->paginate(6);
 
 		return View::make('tournaments.tournamentsIndex', compact('tournaments'));
 	}

@@ -73,7 +73,10 @@ h3{
 	font-family: 'Montserrat';
 	color: #253939;
 }
+.monstserrat{
 
+	font-family: 'Montserrat'
+}
 .jumbotron-h1{
 
 	color: white;
@@ -162,7 +165,7 @@ h3{
 .tips-box{
 
 	/**background-color: #74AFAD;**/
-	margin-top: 20px;
+	background-color: white;
 	padding: 15px;
 	-moz-box-shadow:    1px 1px 1px 1px #ccc;
 	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
@@ -175,8 +178,11 @@ h3{
 	-moz-box-shadow:    1px 1px 1px 1px #ccc;
 	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
 	box-shadow:         1px 1px 1px 1px #ccc;
-	margin-top: 20px;
 	padding: 15px;
+	background-color: white;
+	margin-right: 5px;
+	margin-left: 5px;
+	margin-bottom: 20px;
 }
 .main-content{
 
@@ -184,8 +190,9 @@ h3{
 	-webkit-box-shadow: 1px 1px 1px 1px #ccc;
 	box-shadow:         1px 1px 1px 1px #ccc;
 	*/
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	
 	border-radius: 5px; /* future proofing */
 	border: 1px solid #F8F8F8;
 	background-color: white;
@@ -246,4 +253,13 @@ h3{
 .sidebar-button{
 
 	width: 100%;
+}
+
+.footer{
+
+	background-color: #74AFAD;
+	padding: 10px;
+	color: white;
+	font-family: 'Montserrat';
+	bottom: 0px;
 }
