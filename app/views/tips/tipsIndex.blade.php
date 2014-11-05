@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title')
-Stoa California | Coache's Tips
+Stoa California | Coach's Tips
 @stop
 @section('content')
 <div class="jumbotron jumbotron-clubs">

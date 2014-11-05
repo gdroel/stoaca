@@ -15,7 +15,7 @@ Stoa California Clubs | Add New
 		      <div class="alert alert-danger" role="alert">{{ $error }}</div>
 		  @endforeach
 		@endif
-		{{ Form::open(array('action'=>'ClubsController@doClubsEdit')) }}
+		{{ Form::open(array('action'=>'ClubsController@doClubsCreate')) }}
 		{{ Form::label('name', 'Club Name') }}
 		{{ Form::text('name', $club->name , array('class'=>'form-control')) }}
 		<br>
@@ -34,6 +34,7 @@ Stoa California Clubs | Add New
 		{{ Form::label('website', 'Website') }}
 		{{ Form::text('website', $club->website, array('class'=>'form-control')) }}
 		<br>
+		{{ Form::hidden('new', 'no')}}
 		{{ Form::hidden('user_id', Auth::user()->id) }}
 		{{ Form::submit('Add Club', array('class'=>'btn btn-default')) }}
 		{{ Form::close() }}
@@ -61,6 +62,7 @@ Stoa California Clubs | Add New
 		{{ Form::text('website', null, array('class'=>'form-control')) }}
 		<br>
 		{{ Form::hidden('user_id', Auth::user()->id) }}
+		{{ Form::hidden('new', 'yes')}}
 		{{ Form::submit('Add Club', array('class'=>'btn btn-default')) }}
 		{{ Form::close() }}
 		@endif

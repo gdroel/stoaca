@@ -29,7 +29,7 @@ class TipsController extends BaseController{
 
 			$tip = new Tip();
 
-			$tip->title = Input::get('title');
+			$tip->title = ucwords(Input::get('title'));
 			$tip->description = Input::get('description');
 			$tip->user_id = Input::get('user_id');
 

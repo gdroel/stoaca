@@ -29,16 +29,24 @@ class ClubsController extends BaseController{
 		$rules = array(
 			'name'=>'required|min:3|max:20',
 			'email'=>'email|required',
-			'phone'=>'required|digits|size:9',
+			'phone'=>'required|digits:9',
 			'location'=>'required|min:2|max:20',
 			'coach'=>'required|min:2|max:20',
-			'website'=>'url'
 			);
 
 		$validator = Validator::make(Input::all(),$rules);
 
 		if($validator->passes()){
-			$club = new Club();
+
+			if(Input::get('new') == 'yes'){
+
+				$club = new Club();
+			}
+
+			else{
+
+				$club = Club::where('user_id',Input::get('user_id'))->first();
+			}
 
 			$club->name = Input::get('name');
 			$club->email = Input::get('email');

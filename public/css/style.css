@@ -2,7 +2,13 @@
 
 min-height:100%;
 position:relative;
+margin-bottom: 50px;
 
+}
+
+.space{
+
+	height: 50px;
 }
 
 html,
@@ -36,7 +42,16 @@ body {
 	color: white;
 }
 
+.dropdown .dropdown-menu > li > a{
 
+	color: black;
+	font-family: 'Lora'
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    
+    color: gray;
+}
 
 .navbar-default .navbar-brand{
 
