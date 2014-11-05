@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('title')
+Stoa California | Clubs List
+@stop
 @section('content')
 <div class="jumbotron jumbotron-clubs">
 	<div class="container">

@@ -14,9 +14,7 @@
 Route::get('/', 'HomeController@index');
 
 Route::get('clubs', 'ClubsController@clubsIndex');
-Route::get('clubs/new', 'ClubsController@showClubsCreate');
-Route::post('clubs/new', array('before'=>'new', 'uses'=>'ClubsController@doClubsCreate'));
-Route::post('clubs/edit', 'ClubsController@doClubsEdit');
+
 
 Route::get('register','UsersController@showRegister');
 Route::post('register','UsersController@doRegister');
@@ -26,10 +24,22 @@ Route::post('login', 'UsersController@doLogin');
 Route::get('logout', 'UsersController@doLogout');
 
 Route::get('tips', 'TipsController@tipsIndex');
-Route::get('tips/new', 'TipsController@showTipsCreate');
-Route::post('tips/new', 'TipsController@doTipsCreate');
+
 Route::get('tips/{id}', 'TipsController@showTip');
 
 Route::get('tournaments', 'tournamentsController@TournamentsIndex');
-Route::get('tournaments/new', 'TournamentsController@showTournamentsCreate');
-Route::post('/tournaments/new', 'TournamentsController@doTournamentsCreate');
+
+
+Route::group(array('before' => 'auth'), function()
+{
+    Route::get('tips/new', 'TipsController@showTipsCreate');
+	Route::post('tips/new', 'TipsController@doTipsCreate');
+
+	Route::get('tournaments/new', 'TournamentsController@showTournamentsCreate');
+	Route::post('/tournaments/new', 'TournamentsController@doTournamentsCreate');
+
+	Route::get('clubs/new', 'ClubsController@showClubsCreate');
+	Route::post('clubs/new', array('before'=>'new', 'uses'=>'ClubsController@doClubsCreate'));
+	Route::post('clubs/edit', 'ClubsController@doClubsEdit');
+
+});

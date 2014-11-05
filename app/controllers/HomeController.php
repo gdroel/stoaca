@@ -15,12 +15,15 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	protected $layout = 'layout';
+
 	public function index(){
 
 		$tournaments = Tournament::orderBy('id','desc')->take(4)->get();
 		$tip = Tip::orderBy('id', 'desc')->first();
+		$clubs = Club::orderBy('name')->get();
 
-		return View::make('index',compact('tournaments','tip'));
+		return View::make('index',compact('tournaments','tip','clubs'));
 
 	}
 

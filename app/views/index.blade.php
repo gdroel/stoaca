@@ -1,5 +1,8 @@
 @extends('layout')
 
+@section('title')
+Stoa California
+@stop
 @section('content')
 <div class="bg1">
 <div class="jumbotron">
@@ -24,7 +27,7 @@
 			@endforeach
 			<p><a class="pull-right" href="{{ URL::to('tournaments') }}">See More...</a></p>
 		</div>
-		<div class="row tournaments-box">
+		<div class="row tournaments-box margin-bottom">
 			<div class="container">
 				<h2>Latest Coaching Tip</h2>
 				<hr>
@@ -50,10 +53,9 @@
 		<h3>All Clubs</h3>
 		<hr>
 		<ul class="list-group">
-			<li class="list-group-item">Rhetoric</li>
-			<li class="list-group-item">CLASH</li>
-			<li class="list-group-item">Fartitude</li>
-			<li class="list-group-item">Fortitude</li>
+			@foreach($clubs as $club)
+			<li class="list-group-item">{{ $club->name }}</li>
+			@endforeach
 		</ul>
 	</div>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stoa California</title>
+    <title>@yield('title')</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
     <![endif]-->
   </head>
   <body>
+  <div id="wrapper">
   <div class="container">
   <div class="navbar navbar-default" role="navigation">
           <div class="container-fluid">
@@ -61,5 +62,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     @yield('scripts')
+  </div>
   </body>
 </html>

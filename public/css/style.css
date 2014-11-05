@@ -1,3 +1,16 @@
+#wrapper{
+
+min-height:100%;
+position:relative;
+
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
 /*** Navbar ***/
 .logo{
 	margin-top: -40px;
@@ -152,6 +165,11 @@ h3{
 	
 }
 
+.margin-bottom{
+
+	margin-bottom: 20px;
+}
+
 .tip{
 
 	-moz-box-shadow:    1px 1px 1px 1px #ccc;
@@ -261,5 +279,9 @@ h3{
 	padding: 10px;
 	color: white;
 	font-family: 'Montserrat';
-	bottom: 0px;
+	width:100%;
+	margin-top: 20px;
+	position:absolute;
+	bottom:0;
+	left:0;
 }

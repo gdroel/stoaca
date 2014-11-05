@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('title')
+{{ $tip->title }}
+@stop
 @section('content')
 <div class="jumbotron jumbotron-clubs">
 

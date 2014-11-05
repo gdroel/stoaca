@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('title')
+Stoa California | Add New Coach's Tip
+@stop
 @section('content')
 <div class="small-bg"></div>
 <div class="container movedown">
