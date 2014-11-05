@@ -1,5 +1,7 @@
 @extends('layout')
-
+@section('title')
+Stoa California | Register
+@stop
 @section('content')
 <div class="small-bg"></div>
 <div class="container movedown">

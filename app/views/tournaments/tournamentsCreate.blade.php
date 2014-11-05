@@ -1,4 +1,8 @@
 @extends('layout')
+
+@section('title')
+Stoa California | Add New Tournament
+@stop
 @section('stylesheets')
  <link href="../css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 
