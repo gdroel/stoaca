@@ -30,9 +30,9 @@ Stoa California
 		<div class="row tournaments-box margin-bottom">
 			<div class="container">
 				<h2>Latest Coaching Tip</h2>
-				<hr>
 			</div>
 			<div class="col-md-12">
+				<hr>
 				<h3>{{ $tip->title }}</h3>
 				<p>{{ $tip->description }}</p>
 			</div>

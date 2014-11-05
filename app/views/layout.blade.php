@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -39,7 +39,16 @@
                 <li><a href="{{ URL::to('/clubs') }}">Clubs</a></li>
                 <li><a href="{{ URL::to('/tips') }}">Coach's Tips</a></li>
                 <li><a href="{{ URL::to('/tournaments') }}">Tournaments</a></li>
-                <li><a href="#">Resources</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="http://stoausa.org">Stoa USA</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://drive.google.com/viewerng/viewer?a=v&pid=sites&srcid=c3RvYXVzYS5vcmd8c3RvYXVzYXxneDozOTQzOTY4ZTQ0NDZhN2Yx">LD Rules</a></li>
+                  <li><a href="https://drive.google.com/viewerng/viewer?a=v&pid=sites&srcid=c3RvYXVzYS5vcmd8c3RvYXVzYXxneDo0NjdlNDk1OWEyYjk1ZTM">TP Rules</a></li>
+                  <li><a href="https://drive.google.com/viewerng/viewer?a=v&pid=sites&srcid=c3RvYXVzYS5vcmd8c3RvYXVzYXxneDozMDlhZmZhM2EwOTI0Yzlh">Parli Rules</a></li>
+                </ul>
+              </li>
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 @if(Auth::check())

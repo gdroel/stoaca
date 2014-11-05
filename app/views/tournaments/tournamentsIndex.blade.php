@@ -49,8 +49,8 @@ Stoa California | Tournaments
 	<div class="col-md-4">
 		@if(Auth::check())
 			<a href="{{ URL::to('tournaments/new') }}" class="btn btn-default sidebar-button">Add A Tournament</a>
+					<hr>
 		@endif
-		<hr>
 		<h3>Tournaments</h3>
 		<hr>
 		<ul class="list-group">
